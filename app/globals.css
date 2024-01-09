@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Lobster&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -17,11 +19,82 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: white;
+}
+
+.font-teko {
+  font-family: 'Teko', sans-serif;
+}
+
+.font-vibes {
+  font-family: 'Great Vibes', cursive;
+}
+
+.grid-a {
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+  gap: 20px;
+  row-gap: 50px;
+}
+
+.max-w-header {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.home-widge-a {
+  display: flex;
+  width: 100%;
+  background-image: url('https://i.ibb.co/Khm9FcQ/ezgif-com-optimize.gif'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.bg-img-woman {
+  display: flex;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dh01ngdjo/image/upload/v1704483815/FASHION/3._New_Year_Reset_Dynamic_Module_W_Desktop_arr4ol.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.bg-img-man {
+  display: flex;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dh01ngdjo/image/upload/v1704483932/FASHION/Clothing_Mega_Menu_Espot_M_T-Shirts_Desktop_qe5avt.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.bg-img-acs1 {
+  display: flex;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dh01ngdjo/image/upload/v1704496776/FASHION/Bags___Accessories_Bags_Mega_Menu_Espots_zg83x1.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.bg-img-acs2 {
+  display: flex;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dh01ngdjo/image/upload/v1704496776/FASHION/Bags___Accessories_Hats_Scarves___Gloves_Mega_Menu_Espots_M_jznuam.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.bg-img-acs3 {
+  display: flex;
+  width: 100%;
+  background-image: url('https://res.cloudinary.com/dh01ngdjo/image/upload/v1704496776/FASHION/Bags___Accessories_Belts_Mega_Menu_Espots_ldobwz.jpg'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+  background-position: center; /* Posiciona la imagen en el centro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }

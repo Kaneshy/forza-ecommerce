@@ -45,6 +45,10 @@ body {
   margin: 0 auto;
 }
 
+.slick-slide > div {
+  margin: 0 10px;
+}
+
 
 .home-widge-a {
   display: flex;

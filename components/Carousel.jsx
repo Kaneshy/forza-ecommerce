@@ -51,9 +51,9 @@ const Carousel = () => {
     return (
         <Slider {...settings} >
 
-            {products.map((x) => {
+            {products.map((x, index) => {
                 return (
-                    <div className='border-2 h-96 flex object-cover' >
+                    <div key={index} className='border-2 h-96 flex object-cover' >
                         <img className='flex w-full object-cover'  src={x.imgUrl} alt="" />
                     </div>
                 )

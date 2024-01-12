@@ -52,7 +52,7 @@ const Footer = () => {
                 </div>
 
             </section>
-            <section className='p-4 flex justify-around  max-lg:flex-col gap-8'>
+            <section className='p-4 flex justify-around  max-sm:flex-col gap-8'>
                 {social.map((x, i) => {
                     return (
                         <a key={i} href={x.route} target='_blank' className='flex justify-center items-center gap-4' >

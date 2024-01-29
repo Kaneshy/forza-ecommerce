@@ -144,7 +144,7 @@ const Signup = () => {
 
                 <div onClick={() => signIn("google", {callbackUrl: DEFAULT_LOGIN_REDIRECT})} className="rounded px-6 py-2 shadow cursor-pointer bg-gray-50 grid place-items-center mx-auto mb-8">
                   <FcGoogle size={30} />
-                </div>{" "}
+                </div>
 
                 <div className="text-lg flex  text-slate-900 font-medium">
                   <span>Have an account?</span>

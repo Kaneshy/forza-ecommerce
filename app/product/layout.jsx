@@ -11,7 +11,7 @@ export const metadata = {
 export default function DashboardLayout({ children }) {
     return (
         <main className="">
-            <div className='bg-neutral-950'>
+            <div className='bg-neutral-950 text-white'>
                 <Navbar />
             </div>
             <div className="">

@@ -13,7 +13,8 @@ const TopSectionbar = () => {
     const [sex, setsex] = useState('')
 
     useEffect(() => {
-        const nuevaCadena = params.id.split('%26')[0];
+        // const nuevaCadena = params.id.split('%26')[0];
+        const nuevaCadena = 'jewelry'
         setsex(nuevaCadena)
     }, [params])
 

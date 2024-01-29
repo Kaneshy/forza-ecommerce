@@ -6,13 +6,17 @@ import { IoIosMenu } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { useSelector } from 'react-redux';
 import { signIn, signOut, useSession } from "next-auth/react";
+import Userbar from "../auth/userbar";
+import { useState } from "react";
 
 
 
 const Navbar = ({ value }) => {
     const cartItems = useSelector(state => state.cart.items);
+    const session = useSession()
+    const currectUser = session.data.user
+    const [isActive, setisActive] = useState(false)
 
-    console.log('va', value)
     return (
         <main >
             <SecondNavbar />
@@ -24,15 +28,31 @@ const Navbar = ({ value }) => {
                     </div>
                     <Link className="text-heading1-bold " href={'/'}>FORZA</Link>
                     <div className="flex gap-x-4">
-                        <button onClick={() => signOut()}>Log In / Sign Up</button>
-                        <Link href={'/test'} className=" p-1 relative rounded-full bg-opacity-25">
-                            <MdOutlineShoppingCart size={24} />
-                            {cartItems.length === 0 ? (
-                                <div></div>
-                            ) : (
-                                <div className="absolute text-tiny-medium -top-2 -right-2 bg-red-500 px-1 text-white rounded-full ">{cartItems.length}</div>
-                            )}
-                        </Link>
+                        {currectUser ? (
+                            <div onClick={(() => setisActive(!isActive))} className='relative flex gap-x-4 items-center'>
+                                <img src={currectUser.image || ''} className='bg-gray-800 rounded-full' width={35} height={35} alt="" />
+                                {isActive && (
+                                    <div className="absolute justify-center text-center flex-col gap-2 bg-neutral-900 text-white  flex min-w-28  -bottom-24 p-2 rounded-xl">
+                                        <button onClick={() => signOut()} className="p-1 rounded-xl hover:bg-neutral-800">
+                                            Sign Out
+                                        </button>
+                                        <p className="p-1 rounded-xl hover:bg-neutral-800">Profile</p>
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <button onClick={() => signIn()}>Log In / Sign Up</button>
+                        )}
+                        <div className="flex gap-x-4">
+                            <Link href={'/test'} className=" p-1 relative rounded-full bg-opacity-25">
+                                <MdOutlineShoppingCart size={24} />
+                                {cartItems.length === 0 ? (
+                                    <div></div>
+                                ) : (
+                                    <div className="absolute text-tiny-medium -top-2 -right-2 bg-red-500 px-1 text-white rounded-full ">{cartItems.length}</div>
+                                )}
+                            </Link>
+                        </div>
                     </div>
                 </nav>
                 <div className='w-full flex justify-center gap-x-4   p-2'>

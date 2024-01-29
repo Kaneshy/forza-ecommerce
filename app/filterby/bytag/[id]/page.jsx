@@ -13,7 +13,6 @@ const ProductPage = ({params}) => {
     const [shortByoption, setshortByoption] = useState('')
 
     useEffect(() => {
-        console.log('sho', shortByoption)
       const dataproducts = async () => {
         const res = await axios.get(`/api/bytag/${params.id}`)
         setproducts(res.data)

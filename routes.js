@@ -1,5 +1,5 @@
 export const publicRouter = [
-    "/",
+    "/settings",
 ]
 
 export const authRouter = [
@@ -9,4 +9,4 @@ export const authRouter = [
 
 export const apiAuthPrefix = "/api/auth"
 
-export const DEFAULT_LOGIN_REDIRECT = "/product"
+export const DEFAULT_LOGIN_REDIRECT = "/"

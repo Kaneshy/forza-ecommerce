@@ -7,6 +7,8 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import { FcGoogle } from "react-icons/fc";
+
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
@@ -140,8 +142,8 @@ const Signup = () => {
                   <div className="border-b border-gray-800 py-2 w-full px-6" />
                 </div>
 
-                <div onClick={()=>signIn("google")} className="rounded px-6 py-2 shadow cursor-pointer bg-gray-50 grid place-items-center mx-auto mb-8">
-                  <Image src={'/assets/next.svg'} alt="bg" width={100} height={100} />
+                <div onClick={() => signIn("google", {callbackUrl: DEFAULT_LOGIN_REDIRECT})} className="rounded px-6 py-2 shadow cursor-pointer bg-gray-50 grid place-items-center mx-auto mb-8">
+                  <FcGoogle size={30} />
                 </div>{" "}
 
                 <div className="text-lg flex  text-slate-900 font-medium">

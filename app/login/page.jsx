@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn, useSession } from "next-auth/react";
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     // const {data: session, status} = useSession();
@@ -45,7 +46,6 @@ const Login = () => {
         password: user.password,
         redirectTo: DEFAULT_LOGIN_REDIRECT,
       });
-      console.log(res, 'dfd')
 
       // if (res?.error) {
       //   console.log(res);
@@ -137,9 +137,9 @@ const Login = () => {
                 </div>
                 <div className="flex justify-center items-center w-full gap-8 pb-8">
 
-                  <div onClick={()=>signIn("google")} className="rounded px-6 py-2 shadow cursor-pointer bg-gray-50 grid place-items-center mx-auto mb-4">
-                    <Image src={'/assets/next.svg'} alt="bg" width={100} height={100} />
-                  </div>{" "}
+                <div onClick={() => signIn("google", {callbackUrl: DEFAULT_LOGIN_REDIRECT})} className="rounded px-6 py-2 shadow cursor-pointer bg-gray-50 grid place-items-center mx-auto mb-8">
+                  <FcGoogle size={30} />
+                </div>{" "}
 
                 </div>
                 <div className="text-lg text-slate-900 font-medium">

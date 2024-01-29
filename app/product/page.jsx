@@ -3,6 +3,7 @@ import Card from '@/components/Card'
 import LeftSidebar from '@/components/bars/LeftSidebar';
 import Navbar from '@/components/bars/Navbar'
 import axios from 'axios';
+import { useSession } from 'next-auth/react';
 import React, { useEffect, useState } from 'react'
 import { HiAdjustments } from "react-icons/hi";
 
@@ -11,6 +12,8 @@ const ProductPage = () => {
 
     const [products, setproducts] = useState([])
     const [filterH, setfilterH] = useState(false)
+    const session = useSession()
+    console.log('dddddddddd', session)
 
 
 

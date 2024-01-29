@@ -9,9 +9,7 @@ import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-    // const {data: session, status} = useSession();
-    // console.log("status", status);
-    // console.log("session", session);
+   
   
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -35,11 +33,7 @@ const Login = () => {
         setError("please fill all the fields");
         return;
       }
-      // const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
-      // if (!emailRegex.test(user.email)) {
-      //   setError("invalid email id");
-      //   return;
-      // }
+
 
       const res = await signIn("credentials", {
         email: user.email,
@@ -47,13 +41,6 @@ const Login = () => {
         redirectTo: DEFAULT_LOGIN_REDIRECT,
       });
 
-      // if (res?.error) {
-      //   console.log(res);
-      //   setError("error");
-      // }
-
-      // setError("");
-      // router.push("/dashboard");
     } catch (error) {
       console.log(error);
       setError("");

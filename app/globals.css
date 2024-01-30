@@ -15,11 +15,17 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --footer-color: linear-gradient(180deg, #8c74cf 0%, #883660 100%);
+    --other-color: linear-gradient(90deg, #501c32 0%, #813651 100%);
   }
 }
 
 body {
   background-color: white;
+}
+
+.bg-gradient-purple {
+  background: var(--footer-color);
 }
 
 .font-teko {

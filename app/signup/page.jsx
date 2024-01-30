@@ -60,18 +60,14 @@ const Signup = () => {
   };
   return (
     <div
-      className="min-h-screen"
-      style={{
-        backgroundImage: `url("/background.png")`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
+      className="min-h-screen bg-gradient-purple"
+      
     >
       <div className="grid place-items-center mx-auto max-w-4xl w-full py-10 min-h-screen">
-        <div className="flex justify-center items-center lg:flex-row flex-col gap-6 lg:gap-0 w-full shadow-md rounded-2xl">
-          <div className="lg:w-1/2 w-full bg-[#5D7DF3]">
-            <Image
-              src={'/assets/next.svg'}
+        <div className="flex bg-white justify-center items-center lg:flex-row flex-col gap-6 lg:gap-0 w-full shadow-md rounded-2xl">
+        <div className="lg:w-1/2 w-full bg-[#5D7DF3]">
+            <img
+              src={'https://res.cloudinary.com/dh01ngdjo/image/upload/v1704482958/FASHION/am-desk_atn5sb.webp'}
               alt="bg"
               className="w-full h-full"
               width={300}
@@ -79,8 +75,8 @@ const Signup = () => {
             />
           </div>
           <div className="lg:w-1/2 w-full flex flex-col justify-center items-center py-6 bg-[#eff1f6]">
-            <div className="rounded px-4 py-2 shadow bg-[#90a5ef]">
-              <Image src={'/assets/next.svg'} alt="bg" width={100} height={100} />
+            <div className="rounded px-4 py-2  ">
+              <Image src={'/assets/logo.svg'} alt="bg" width={70} height={70} />
             </div>
             <form
               className="w-full px-5 py-6 space-y-6"

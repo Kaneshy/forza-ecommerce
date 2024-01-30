@@ -14,7 +14,7 @@ import { useState } from "react";
 const Navbar = ({ value }) => {
     const cartItems = useSelector(state => state.cart.items);
     const session = useSession()
-    const currectUser = session.data.user
+    console.log(session)
     const [isActive, setisActive] = useState(false)
 
     return (
@@ -28,9 +28,9 @@ const Navbar = ({ value }) => {
                     </div>
                     <Link className="text-heading1-bold " href={'/'}>FORZA</Link>
                     <div className="flex gap-x-4">
-                        {currectUser ? (
+                        {session ? (
                             <div onClick={(() => setisActive(!isActive))} className='relative flex gap-x-4 items-center'>
-                                <img src={currectUser.image || ''} className='bg-gray-800 rounded-full' width={35} height={35} alt="" />
+                                <img src={session.data.user.image || ''} className='bg-gray-800 rounded-full' width={35} height={35} alt="" />
                                 {isActive && (
                                     <div className="absolute justify-center text-center flex-col gap-2 bg-neutral-900 text-white  flex min-w-28  -bottom-24 p-2 rounded-xl">
                                         <button onClick={() => signOut()} className="p-1 rounded-xl hover:bg-neutral-800">

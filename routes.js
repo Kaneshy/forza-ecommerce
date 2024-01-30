@@ -1,5 +1,5 @@
 export const publicRouter = [
-    "/settings",
+    "",
 ]
 
 export const authRouter = [
